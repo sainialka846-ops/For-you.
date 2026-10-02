@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Love 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f9eaf2;color:#482d39;font-family:"DM Sans",sans-serif}
+button{font:inherit;cursor:pointer}
+.app{width:min(100%,520px);margin:auto;min-height:100vh;background:#fff9fc;overflow:hidden;box-shadow:0 0 50px #8b3b5d18}
+.hero{position:relative;padding:32px 24px 34px;text-align:center;overflow:hidden;background:linear-gradient(145deg,#fff7fb,#ffe4ef)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#fff;opacity:.55}
+.hero:before{width:180px;height:180px;right:-70px;top:-80px}.hero:after{width:130px;height:130px;left:-55px;bottom:-70px}
+.badge{position:relative;display:inline-block;padding:7px 13px;border-radius:99px;background:#fff;color:#bd4b75;font-size:12px;font-weight:700;letter-spacing:.5px;box-shadow:0 4px 14px #b83c6b18}
+h1,h2{font-family:"Playfair Display",serif}
+.hero h1{position:relative;margin:18px 0 8px;font-size:40px;line-height:1.08;color:#ad3e68}
+.hero p{position:relative;margin:0 auto;color:#8d6374;max-width:360px;line-height:1.6}
+.heart-float{position:absolute;animation:float 5s ease-in-out infinite;font-size:22px;opacity:.7}
+.h1{left:8%;top:35%;animation-delay:-1s}.h2{right:8%;top:22%;animation-delay:-3s}.h3{right:16%;bottom:13%;animation-delay:-2s}
+@keyframes float{50%{transform:translateY(-14px) rotate(8deg)}}
+.content{padding:20px}
+.card{background:#fff;border:1px solid #f3d5e2;border-radius:24px;padding:20px;box-shadow:0 10px 30px #8d416018;margin-bottom:18px}
+.count-title{font-weight:700;text-align:center;color:#714252;margin-bottom:13px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.count div{background:#fff2f7;border-radius:15px;padding:12px 4px;text-align:center}
+.count strong{display:block;font-size:23px;color:#b9416e}.count span{font-size:10px;color:#a47788}
+.meter-wrap{text-align:center;padding:8px 0}
+.meter{width:240px;height:125px;margin:5px auto 0;position:relative;overflow:hidden}
+.arc{position:absolute;inset:0;border:14px solid #f4dce7;border-bottom:0;border-radius:150px 150px 0 0}
+.arcfill{position:absolute;left:0;right:0;bottom:0;height:100%;border:14px solid transparent;border-top-color:#d24c78;border-left-color:#d24c78;border-radius:150px 150px 0 0;transform:rotate(-90deg);transform-origin:50% 100%;transition:.6s}
+.needle{position:absolute;left:50%;bottom:2px;width:3px;height:68px;background:#4b303b;transform-origin:bottom;transform:rotate(-90deg);transition:.6s}
+.dot{position:absolute;left:calc(50% - 7px);bottom:-1px;width:14px;height:14px;border-radius:50%;background:#d24c78}
+.percent{font-size:34px;font-weight:800;color:#c64672;margin-top:-2px}.meter-note{font-size:13px;color:#95717f}
+.primary{border:0;color:white;background:linear-gradient(135deg,#db5a84,#bb3f6d);padding:13px 23px;border-radius:99px;font-weight:700;box-shadow:0 8px 18px #c0446c30}
+.secondary{border:1px solid #edb7ca;color:#b9436e;background:#fff;padding:12px 20px;border-radius:99px;font-weight:700}
+.center{text-align:center}
+.section-title{text-align:center;margin:8px 0 4px;font-size:28px;color:#9f3b62}
+.section-sub{text-align:center;color:#977181;font-size:13px;line-height:1.5;margin-bottom:16px}
+.game{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:15px 2px 8px}
+.balloon{height:92px;border-radius:50% 50% 48% 48%;display:flex;align-items:center;justify-content:center;color:white;font-size:25px;position:relative;transition:.3s;box-shadow:0 8px 18px #9d446322}
+.balloon:after{content:"";position:absolute;top:84px;width:1px;height:35px;background:#b98599}
+.balloon:nth-child(1){background:#df628a}.balloon:nth-child(2){background:#e9ad52}.balloon:nth-child(3){background:#9584ce}.balloon:nth-child(4){background:#d76c9b}
+.balloon.popped{transform:scale(0) rotate(25deg);opacity:0}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.reason{padding:15px;border-radius:17px;background:#fff2f7;font-size:13px;line-height:1.45}.reason b{display:block;color:#ad4169;margin-bottom:4px}
+.note{background:linear-gradient(145deg,#fff,#fff1f7);text-align:center;border:1px solid #f0cbd9;border-radius:22px;padding:22px}
+.note .emoji{font-size:58px}.note p{font-family:"Playfair Display",serif;font-size:18px;line-height:1.7;color:#714252}
+.signature{margin-top:15px;color:#b54870;font-weight:700}
+.certificate{padding:7px;background:#fce8f1;border-radius:20px}.certificate-inner{border:2px dashed #d7799b;border-radius:15px;padding:25px 18px;text-align:center;background:#fff}
+.certificate h2{color:#ad3e68;margin:6px 0}.certificate p{font-size:13px;line-height:1.6;color:#785866}
+.big-heart{font-size:42px}
+.footer{text-align:center;padding:5px 20px 30px;color:#a67a8b;font-size:12px}
+.progress{height:7px;background:#f5dce6;border-radius:99px;overflow:hidden;margin:8px 0 16px}.progress i{display:block;height:100%;width:0;background:#d34c78;transition:.35s}
+.note-modal{position:fixed;inset:0;background:#4a263788;display:none;align-items:center;justify-content:center;padding:22px;z-index:50;backdrop-filter:blur(5px)}
+.note-modal.show{display:flex;animation:fadeIn .25s ease}
+.note-popup{width:min(100%,360px);background:#fff9fc;border:2px solid #f0bfd2;border-radius:25px;padding:28px 22px;text-align:center;box-shadow:0 20px 60px #54263d55;animation:popIn .3s ease}
+.note-popup .note-icon{font-size:55px;margin-bottom:5px}
+.note-popup h3{font-family:"Playfair Display",serif;color:#ad3e68;font-size:27px;margin:8px 0}
+.note-popup p{color:#765462;line-height:1.7;font-size:15px;margin:10px 0 20px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{transform:scale(.85) translateY(12px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#432b37;color:white;padding:11px 17px;border-radius:99px;font-size:13px;display:none;z-index:20;box-shadow:0 8px 25px #0003}
+.hidden{display:none}
+@media(min-width:600px){body{padding:24px 0}.app{border-radius:28px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+  <span class="heart-float h1">♡</span><span class="heart-float h2">♥</span><span class="heart-float h3">♡</span>
+  <div class="badge">A LITTLE SURPRISE FOR YOU 💗</div>
+  <h1>Happy Boyfriend's Day</h1>
+  <p>A tiny corner of the internet made especially for my favourite person.</p>
+</header>
+
+<main class="content">
+  <section class="card">
+    <div class="count-title">Counting down to our special day ✨</div>
+    <div class="count"><div><strong id="d">01</strong><span>DAYS</span></div><div><strong id="h">02</strong><span>HOURS</span></div><div><strong id="m">56</strong><span>MIN</span></div><div><strong id="s">28</strong><span>SEC</span></div></div>
+  </section>
+
+  <section class="card meter-wrap">
+    <h2 class="section-title">How much do I love you?</h2>
+    <div class="meter">
+      <div class="arc"></div><div class="arcfill" id="arcfill"></div><div class="needle" id="needle"></div><div class="dot"></div>
+    </div>
+    <div class="percent" id="pct">0%</div>
+    <div class="meter-note" id="meterNote">There is a whole lot of love waiting here...</div>
+    <br><button class="primary" id="loveBtn">Add some love 💗</button>
+  </section>
+
+  <section class="card hidden" id="reaction">
+    <h2 class="section-title">Okay... you found it 🥹</h2>
+    <p class="section-sub">But my love meter clearly needs more than 100%. Keep going.</p>
+    <div class="center"><button class="primary" onclick="startGame()">Open the surprise →</button></div>
+  </section>
+
+  <section class="card hidden" id="gameCard">
+    <h2 class="section-title">Pop the love balloons</h2>
+    <p class="section-sub">Every balloon hides a tiny reminder of why you're special.</p>
+    <div class="game">
+      <div class="balloon">♥</div><div class="balloon">♥</div><div class="balloon">♥</div><div class="balloon">♥</div>
+    </div>
+    <div class="center"><small><span id="popped">0</span> of 4 popped</small></div>
+    <div class="progress"><i id="prog"></i></div>
+    <div class="center"><button class="primary hidden" id="gameNext">Read my note 💌</button></div>
+  </section>
+
+  <section class="card hidden" id="noteCard">
+    <h2 class="section-title">A little note for you</h2>
+    <div class="note">
+      <div class="emoji">🧸</div>
+      <p>“It's the little things that make you my favourite person — your silly jokes, your kindness, the way you make ordinary moments feel special, and simply having you around. And please kam naraj hoya kar... I love seeing you happy. 🥺💗”</p>
+      <div class="signature">Made with all my heart ♡</div>
+    </div>
+    <div class="center" style="margin-top:16px"><button class="secondary" id="certificateBtn">One last thing ✨</button></div>
+  </section>
+
+  <section class="card hidden" id="certCard">
+    <div class="certificate"><div class="certificate-inner">
+      <div class="big-heart">💗</div>
+      <h2>Certificate of Love</h2>
+      <p>This is proudly presented to</p>
+      <h2>My Favourite Person</h2>
+      <p>for being officially wonderful, for making me smile, and for having a permanent place in my heart.</p>
+      <p><b>Issued with unlimited love • No expiry date</b></p>
+      <div class="big-heart">♡</div>
+    </div></div>
+    <div class="center" style="margin-top:17px"><button class="primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to the top ↑</button></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">Things I love about you</h2>
+    <div class="reasons">
+      <div class="reason"><b>☀ Your smile</b>It can turn an ordinary day into a good one.</div>
+      <div class="reason"><b>😂 Your humour</b>You somehow make even the smallest things funny.</div>
+      <div class="reason"><b>🫶 Your heart</b>Your kindness is one of my favourite things.</div>
+      <div class="reason"><b>🌙 Your presence</b>Everything feels a little better with you around.</div>
+    </div>
+  </section>
+</main>
+<footer class="footer">Made with love, just for you ♡</footer>
+</div>
+
+<div class="note-modal" id="noteModal">
+  <div class="note-popup">
+    <div class="note-icon" id="modalIcon">💗</div>
+    <h3 id="modalTitle">A little love note</h3>
+    <p id="modalText"></p>
+    <button class="primary" id="closeNote">Keep popping 🎈</button>
+  </div>
+</div>
+<div class="toast" id="toast">Love added 💗</div>
+
+<script>
+let love=0;
+const notes=['There is a whole lot of love waiting here...','Getting warmer, cutie ♡','My heart is doing little flips!','Okay... this is getting serious 💗','Apparently 100% is not enough.'];
+const btn=document.getElementById('loveBtn');
+btn.onclick=()=>{
+  love=Math.min(100,love+10);
+  document.getElementById('pct').textContent=love+'%';
+  document.getElementById('meterNote').textContent=notes[Math.min(4,Math.floor(love/25))];
+  const angle=-90+love*1.8;
+  document.getElementById('needle').style.transform=`rotate(${angle}deg)`;
+  document.getElementById('arcfill').style.transform=`rotate(${angle}deg)`;
+  const t=document.getElementById('toast');t.style.display='block';setTimeout(()=>t.style.display='none',650);
+  if(love===100)setTimeout(()=>{document.getElementById('reaction').classList.remove('hidden');document.getElementById('reaction').scrollIntoView({behavior:'smooth'});},450);
+};
+function startGame(){document.getElementById('gameCard').classList.remove('hidden');document.getElementById('gameCard').scrollIntoView({behavior:'smooth'});}
+let popped=0;
+const balloonNotes=[
+  {icon:'🥰',title:'Your smile',text:'Your smile has a way of making even an ordinary moment feel special. Never stop smiling.'},
+  {icon:'😂',title:'Your silly side',text:'I love the little jokes, silly moments and random things that make us laugh together.'},
+  {icon:'🫶',title:'Your heart',text:'Your kindness is one of the things I treasure most. You make people around you feel cared for.'},
+  {icon:'🌙',title:'Having you around',text:'Sometimes I do not need anything big. Just having you around is already enough.'}
+];
+const modal=document.getElementById('noteModal');
+const modalIcon=document.getElementById('modalIcon');
+const modalTitle=document.getElementById('modalTitle');
+const modalText=document.getElementById('modalText');
+
+document.querySelectorAll('.balloon').forEach((b,index)=>b.onclick=()=>{
+ if(b.classList.contains('popped'))return;
+ b.classList.add('popped');
+ popped++;
+ document.getElementById('popped').textContent=popped;
+ document.getElementById('prog').style.width=(popped*25)+'%';
+
+ const note=balloonNotes[index];
+ modalIcon.textContent=note.icon;
+ modalTitle.textContent=note.title;
+ modalText.textContent=note.text;
+ modal.classList.add('show');
+
+ if(popped===4){
+   document.getElementById('gameNext').classList.remove('hidden');
+ }
+});
+
+document.getElementById('closeNote').onclick=()=>modal.classList.remove('show');
+modal.onclick=(e)=>{if(e.target===modal)modal.classList.remove('show')};
+document.getElementById('gameNext').onclick=()=>{
+ document.getElementById('noteCard').classList.remove('hidden');
+ document.getElementById('noteCard').scrollIntoView({behavior:'smooth'});
+};
+document.getElementById('certificateBtn').onclick=()=>{
+ document.getElementById('certCard').classList.remove('hidden');
+ document.getElementById('certCard').scrollIntoView({behavior:'smooth'});
+};
+</script>
+</body>
+</html>
